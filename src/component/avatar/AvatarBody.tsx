@@ -4,11 +4,9 @@ interface BodyProps {
     shirt: string;
     shirtArm: string;
     hand: string;
-    shirtArmFlip?: boolean;
-    handFlip?: boolean;
 }
 
-const Body: React.FC<BodyProps> = ({ shirt, shirtArm, hand, shirtArmFlip, handFlip }) => {
+const AvatarBody: React.FC<BodyProps> = ({ shirt, shirtArm, hand }) => {
     return (
         <div className="avatar-body">
             <img src={shirt} style={{ position: 'absolute', top: 179, left: 162, zIndex: 0 }} />
@@ -23,7 +21,7 @@ const Body: React.FC<BodyProps> = ({ shirt, shirtArm, hand, shirtArmFlip, handFl
                     top: 181,
                     left: 20,
                     zIndex: 5,
-                    transform: shirtArmFlip ? 'scaleX(-1)' : undefined
+                    transform: 'scaleX(-1)'
                 }}
             />
             <img
@@ -33,11 +31,11 @@ const Body: React.FC<BodyProps> = ({ shirt, shirtArm, hand, shirtArmFlip, handFl
                     top: 280,
                     left: 0,
                     zIndex: 4,
-                    transform: handFlip ? 'scaleX(-1)' : undefined
+                    transform: 'scaleX(-1)'
                 }}
             />
         </div>
     );
 };
 
-export default Body;
+export default AvatarBody;

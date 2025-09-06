@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Body from './Body';
-import LowerBody from './LowerBody';
-import Head from "./Hand.tsx";
+import React, {useEffect, useState} from 'react';
+import Body from './AvatarBody.tsx';
+import LowerBody from './AvatarLowerBody.tsx';
+import Head from "./AvatarHand.tsx";
 
 interface AvatarConfig {
     head: {
@@ -35,7 +35,13 @@ const Avatar: React.FC = () => {
     if (!config) return <div>Loading...</div>;
 
     return (
-        <div className="avatar-container" style={{ position: 'relative', width: 480, height: 550 }}>
+        <div className="avatar-container" style={{
+            position: 'relative',
+            width: 240,
+            height: 270,
+            transform: 'scale(0.5)',   // 整体缩放 0.5 倍
+            transformOrigin: 'top left'
+        }}>
             <Head
                 hair={config.head.hair}
                 face={config.head.face}
@@ -46,8 +52,6 @@ const Avatar: React.FC = () => {
                 shirt={config.body.shirt}
                 shirtArm={config.body.shirtArm.src}
                 hand={config.body.hand.src}
-                shirtArmFlip={config.body.shirtArm.flip}
-                handFlip={config.body.hand.flip}
             />
             <LowerBody
                 waist={config.lowerBody.waist}

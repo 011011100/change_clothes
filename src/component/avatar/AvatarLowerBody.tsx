@@ -8,7 +8,7 @@ interface LowerBodyProps {
     shoesFlip?: boolean;
 }
 
-const LowerBody: React.FC<LowerBodyProps> = ({ waist, pants, shoes, pantsFlip, shoesFlip}) => {
+const AvatarLowerBody: React.FC<LowerBodyProps> = ({ waist, pants, shoes, pantsFlip, shoesFlip}) => {
     return (
         <div className="avatar-lower-body" style={{ position:'relative',top: 0, left:110 }}>
             <img src={waist} style={{ position: 'absolute', top: 344, left: 51, zIndex: 2 }} />
@@ -28,4 +28,4 @@ const LowerBody: React.FC<LowerBodyProps> = ({ waist, pants, shoes, pantsFlip, s
     );
 };
 
-export default LowerBody;
+export default AvatarLowerBody;

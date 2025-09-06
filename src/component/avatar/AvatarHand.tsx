@@ -7,7 +7,7 @@ interface HeadProps {
     neck: string;
 }
 
-const Head: React.FC<HeadProps> = ({ hair, face, head, neck }) => {
+const AvatarHead: React.FC<HeadProps> = ({ hair, face, head, neck }) => {
     return (
         <div className="avatar-head" style={{ position:'relative',top: 0, left:150 }}>
             <img src={hair} style={{ position: 'absolute', top: 0, left: 10, zIndex: 30 }} />
@@ -18,4 +18,4 @@ const Head: React.FC<HeadProps> = ({ hair, face, head, neck }) => {
     );
 };
 
-export default Head;
+export default AvatarHead;
