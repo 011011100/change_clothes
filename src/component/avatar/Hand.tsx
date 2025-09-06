@@ -9,7 +9,7 @@ interface HeadProps {
 
 const Head: React.FC<HeadProps> = ({ hair, face, head, neck }) => {
     return (
-        <div className="avatar-head">
+        <div className="avatar-head" style={{ position:'relative',top: 0, left:150 }}>
             <img src={hair} style={{ position: 'absolute', top: 0, left: 10, zIndex: 30 }} />
             <img src={face} style={{ position: 'absolute', top: 70, left: 35, zIndex: 20 }} />
             <img src={head} style={{ position: 'absolute', top: 20, left: 0, zIndex: 10 }} />

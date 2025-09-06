@@ -35,7 +35,7 @@ const Avatar: React.FC = () => {
     if (!config) return <div>Loading...</div>;
 
     return (
-        <div className="avatar-container" style={{ position: 'relative', width: 300, height: 500 }}>
+        <div className="avatar-container" style={{ position: 'relative', width: 480, height: 550 }}>
             <Head
                 hair={config.head.hair}
                 face={config.head.face}
