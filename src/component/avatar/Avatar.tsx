@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Body from './AvatarBody.tsx';
 import LowerBody from './AvatarLowerBody.tsx';
 import Head from "./AvatarHand.tsx";
+import {useClothingOptionsStore} from "../../store/ClothingOptionsState.ts";
 
 interface AvatarConfig {
     head: {
@@ -24,6 +25,9 @@ interface AvatarConfig {
 }
 
 const Avatar: React.FC = () => {
+
+    const { choose } = useClothingOptionsStore();
+
     const [config, setConfig] = useState<AvatarConfig | null>(null);
 
     useEffect(() => {
@@ -44,21 +48,21 @@ const Avatar: React.FC = () => {
             transformOrigin: 'top left'
         }}>
             <Head
-                hair={config.head.hair}
+                hair={choose.hair.path}
                 face={config.head.face}
                 head={config.head.head}
                 neck={config.head.neck}
             />
             <Body
-                shirt={config.body.shirt}
-                shirtArm={config.body.shirtArm}
+                shirt={choose.shirt.shirt}
+                shirtArm={choose.shirt.shirtArm}
                 hand={config.body.hand}
                 arm={config.body.arm}
             />
             <LowerBody
                 waist={config.lowerBody.waist}
                 pants={config.lowerBody.pants}
-                shoes={config.lowerBody.shoes}
+                shoes={choose.shoes.path}
             />
         </div>
     );

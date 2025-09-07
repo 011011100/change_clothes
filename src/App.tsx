@@ -2,37 +2,11 @@ import './style/App.css'
 import Avatar from "./component/avatar/Avatar.tsx";
 import {Accordion, AccordionItem, Card, CardBody, ScrollShadow} from "@heroui/react";
 import AvatarClothing from "./component/avatar/AvatarClothing.tsx";
+import {clothingOptions,} from "./store/ClothingOptions.ts";
+import {useClothingOptionsStore} from "./store/ClothingOptionsState.ts";
 
 function App() {
-    const head = [
-        "/PNG/Hair/Black/blackMan1.png",
-        "/PNG/Hair/Black/blackMan2.png",
-        "/PNG/Hair/Black/blackMan3.png",
-        "/PNG/Hair/Black/blackMan4.png",
-        "/PNG/Hair/Black/blackMan5.png",
-        "/PNG/Hair/Black/blackMan6.png",
-    ]
-    const clothing = [
-        {
-            shirt: "/PNG/Shirts/Blue/blueShirt1.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
-        },
-        {
-            shirt: "/PNG/Shirts/Blue/blueShirt2.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
-        },
-        {
-            shirt: "/PNG/Shirts/Blue/blueShirt3.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
-        }
-    ]
-    const shoe = [
-        "/PNG/Shoes/Black/blackShoe1.png",
-        "/PNG/Shoes/Black/blackShoe2.png",
-        "/PNG/Shoes/Black/blackShoe3.png",
-        "/PNG/Shoes/Black/blackShoe4.png",
-        "/PNG/Shoes/Black/blackShoe5.png",
-    ]
+    const { choose, setClothing } = useClothingOptionsStore();
 
     return (
         <>
@@ -40,39 +14,63 @@ function App() {
                 <div className='flex items-center justify-center w-150 inset-shadow-sm inset-shadow-gray-500 rounded-xl'>
                     <Avatar/>
                 </div>
+                {/* 右边选择面板 */}
                 <Card>
                     <CardBody>
-                        <ScrollShadow hideScrollBar className='pl-4 w-120 h-200 overflow-y-auto overscroll-y-auto'>
+                        <ScrollShadow hideScrollBar className="pl-4 w-120 h-200 overflow-y-auto overscroll-y-auto">
                             <Accordion selectionMode="multiple">
+                                {/* 头发 */}
                                 <AccordionItem key="1" aria-label="head" title="头发">
-                                    <div className='flex items-center flex-wrap'>
-                                        {head.map((item) => (
-                                            <div className='min-w-1/2 flex justify-center'>
-                                                <img src={item} className='scale-50'/>
+                                    <div className="flex items-center flex-wrap">
+                                        {clothingOptions.hair.map((item) => (
+                                            <div
+                                                key={item.key}
+                                                className={`min-w-1/2 flex justify-center cursor-pointer p-1 rounded-lg ${
+                                                    choose.hair.key === item.key ? "bg-blue-200" : ""
+                                                }`}
+                                                onClick={() => setClothing("hair", item.key)}
+                                            >
+                                                <img src={item.path} className="scale-50" />
                                             </div>
                                         ))}
                                     </div>
                                 </AccordionItem>
+
+                                {/* 衣服 */}
                                 <AccordionItem key="2" aria-label="clothing" title="衣服">
-                                    <div className='flex items-center flex-wrap '>
-                                        {clothing.map((item) => (
-                                            <div className='min-w-1/2 flex justify-center p-1'>
-                                                <AvatarClothing shirt={item.shirt}
-                                                                shirtArm={item.shirtArm}
-                                                />
+                                    <div className="flex items-center flex-wrap">
+                                        {clothingOptions.shirt.map((item) => (
+                                            <div
+                                                key={item.key}
+                                                className={`min-w-1/2 flex justify-center cursor-pointer p-1 rounded-lg ${
+                                                    choose.shirt.key === item.key ? "bg-blue-200" : ""
+                                                }`}
+                                                onClick={() => setClothing("shirt", item.key)}
+                                            >
+                                                <AvatarClothing shirt={item.shirt} shirtArm={item.shirtArm} />
                                             </div>
                                         ))}
                                     </div>
                                 </AccordionItem>
+
+                                {/* 鞋子 */}
                                 <AccordionItem key="3" aria-label="shoe" title="鞋子">
-                                    <div className='flex items-center flex-wrap'>
-                                        {shoe.map((item) => (
-                                            <div className='min-w-1/2 flex justify-center p-1 pt-2 pb-2'>
-                                                <img src={item} className='scale-50'/>
+                                    <div className="flex items-center flex-wrap">
+                                        {clothingOptions.shoes.map((item) => (
+                                            <div
+                                                key={item.key}
+                                                className={`min-w-1/2 flex justify-center cursor-pointer p-1 pt-2 pb-2 rounded-lg ${
+                                                    choose.shoes.key === item.key ? "bg-blue-200" : ""
+                                                }`}
+                                                onClick={() => setClothing("shoes", item.key)}
+                                            >
+                                                <img src={item.path} className="scale-50" />
                                             </div>
                                         ))}
                                     </div>
                                 </AccordionItem>
+
+                                {/* 场景 */}
                                 <AccordionItem key="4" aria-label="scene" title="场景">
                                     场景
                                 </AccordionItem>
