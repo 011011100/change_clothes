@@ -7,24 +7,13 @@
   },
   "body": {
     "shirt": "/PNG/Shirts/Blue/blueShirt1.png",
-    "shirtArm": {
-      "src": "/PNG/Shirts/Blue/blueArm_long.png",
-      "flip": true
-    },
-    "hand": {
-      "src": "/PNG/Skin/Tint 1/tint1_hand.png",
-      "flip": true
-    }
+    "shirtArm":"/PNG/Shirts/Blue/blueArm_long.png",
+    "hand": "/PNG/Skin/Tint 1/tint1_hand.png",
+    "arm": "/PNG/Skin/Tint 1/tint1_arm.png"
   },
   "lowerBody": {
     "waist": "/PNG/Pants/Blue 1/pantsBlue11.png",
-    "pants": {
-      "src": "/PNG/Pants/Blue 1/pantsBlue1_long.png",
-      "flip": true
-    },
-    "shoes": {
-      "src": "/PNG/Shoes/Black/blackShoe1.png",
-      "flip": true
-    }
+    "pants": "/PNG/Pants/Blue 1/pantsBlue1_long.png",
+    "shoes":  "/PNG/Shoes/Black/blackShoe1.png"
   }
 }

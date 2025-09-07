@@ -12,13 +12,14 @@ interface AvatarConfig {
     };
     body: {
         shirt: string;
-        shirtArm: { src: string; flip?: boolean };
-        hand: { src: string; flip?: boolean };
+        shirtArm: string
+        hand: string
+        arm: string;
     };
     lowerBody: {
         waist: string;
-        pants: { src: string; flip?: boolean };
-        shoes: { src: string; flip?: boolean };
+        pants: string
+        shoes: string
     };
 }
 
@@ -50,15 +51,14 @@ const Avatar: React.FC = () => {
             />
             <Body
                 shirt={config.body.shirt}
-                shirtArm={config.body.shirtArm.src}
-                hand={config.body.hand.src}
+                shirtArm={config.body.shirtArm}
+                hand={config.body.hand}
+                arm={config.body.arm}
             />
             <LowerBody
                 waist={config.lowerBody.waist}
-                pants={config.lowerBody.pants.src}
-                shoes={config.lowerBody.shoes.src}
-                pantsFlip={config.lowerBody.pants.flip}
-                shoesFlip={config.lowerBody.shoes.flip}
+                pants={config.lowerBody.pants}
+                shoes={config.lowerBody.shoes}
             />
         </div>
     );

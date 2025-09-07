@@ -37,7 +37,7 @@ function App() {
     return (
         <>
             <div className='flex justify-center'>
-                <div className='flex items-center justify-center w-100 pr-40'>
+                <div className='flex items-center justify-center w-150 inset-shadow-sm inset-shadow-gray-500 rounded-xl'>
                     <Avatar/>
                 </div>
                 <Card>
