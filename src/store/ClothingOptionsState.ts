@@ -6,6 +6,7 @@ interface ClothingOptionsState {
         hair: { key: string; path: string };
         shirt: { key: string; shirt: string; shirtArm: string; type: 'long' | 'short' | 'shorter' };
         shoes: { key: string; path: string };
+        background: { key: string; path: string };
     };
 
     setClothing: (part: keyof ClothingOptionsState["choose"], key: string) => void;
@@ -26,6 +27,10 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
         shoes: {
             key: "shoes1",
             path: "/PNG/Shoes/Black/blackShoe1.png"
+        },
+        background: {
+            key: "room3",
+            path:"/background/Wasteland.jpg"
         }
     },
 

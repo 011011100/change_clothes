@@ -16,22 +16,28 @@ export interface ShoeOption {
     path: string;
 }
 
+export interface Background {
+    key: string;
+    path: string;
+}
+
 // 总类型
 export interface ClothingOptions {
     hair: HairOption[];
     shirt: ShirtOption[];
     shoes: ShoeOption[];
+    background: Background[];
 }
 
 // 实际数据
 export const clothingOptions: ClothingOptions = {
     hair: [
-        { key: "hair1", path: "/PNG/Hair/Black/blackMan1.png" },
-        { key: "hair2", path: "/PNG/Hair/Black/blackMan2.png" },
-        { key: "hair3", path: "/PNG/Hair/Black/blackMan3.png" },
-        { key: "hair4", path: "/PNG/Hair/Black/blackMan4.png" },
-        { key: "hair5", path: "/PNG/Hair/Black/blackMan5.png" },
-        { key: "hair6", path: "/PNG/Hair/Black/blackMan6.png" }
+        {key: "hair1", path: "/PNG/Hair/Black/blackMan1.png"},
+        {key: "hair2", path: "/PNG/Hair/Black/blackMan2.png"},
+        {key: "hair3", path: "/PNG/Hair/Black/blackMan3.png"},
+        {key: "hair4", path: "/PNG/Hair/Black/blackMan4.png"},
+        {key: "hair5", path: "/PNG/Hair/Black/blackMan5.png"},
+        {key: "hair6", path: "/PNG/Hair/Black/blackMan6.png"}
     ],
     shirt: [
         {
@@ -90,10 +96,24 @@ export const clothingOptions: ClothingOptions = {
         }
     ],
     shoes: [
-        { key: "shoes1", path: "/PNG/Shoes/Black/blackShoe1.png" },
-        { key: "shoes2", path: "/PNG/Shoes/Black/blackShoe2.png" },
-        { key: "shoes3", path: "/PNG/Shoes/Black/blackShoe3.png" },
-        { key: "shoes4", path: "/PNG/Shoes/Black/blackShoe4.png" },
-        { key: "shoes5", path: "/PNG/Shoes/Black/blackShoe5.png" }
+        {key: "shoes1", path: "/PNG/Shoes/Black/blackShoe1.png"},
+        {key: "shoes2", path: "/PNG/Shoes/Black/blackShoe2.png"},
+        {key: "shoes3", path: "/PNG/Shoes/Black/blackShoe3.png"},
+        {key: "shoes4", path: "/PNG/Shoes/Black/blackShoe4.png"},
+        {key: "shoes5", path: "/PNG/Shoes/Black/blackShoe5.png"}
+    ],
+    background: [
+        {
+        key: "room1",
+        path: "/background/Wasteland.jpg"
+        },
+        {
+            key: "room2",
+            path: "/background/Tavern_Outside.jpeg"
+        },
+        {
+            key: "room3",
+            path: "/background/Tavern.jpg"
+        }
     ]
 };
