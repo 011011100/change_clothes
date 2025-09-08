@@ -3,9 +3,10 @@ import React from 'react';
 interface ClothingProps {
     shirt: string;
     shirtArm: string;
+    type: 'long' | 'short' | 'shorter'
 }
 
-const AvatarClothing: React.FC<ClothingProps> = ({shirt, shirtArm}) => {
+const AvatarClothing: React.FC<ClothingProps> = ({shirt, shirtArm, type}) => {
     return (
         <div className="avatar-clothing" style={{
             position: 'relative',
@@ -23,7 +24,7 @@ const AvatarClothing: React.FC<ClothingProps> = ({shirt, shirtArm}) => {
                 style={{
                     position: 'absolute',
                     top: 0,
-                    left: 0,
+                    left: type === 'long' ? 0 : type === 'short' ? 52 : 112,
                     zIndex: 5,
                     transform: 'scaleX(-1)'
                 }}

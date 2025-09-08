@@ -47,7 +47,7 @@ function App() {
                                                 }`}
                                                 onClick={() => setClothing("shirt", item.key)}
                                             >
-                                                <AvatarClothing shirt={item.shirt} shirtArm={item.shirtArm} />
+                                                <AvatarClothing shirt={item.shirt} shirtArm={item.shirtArm} type={item.type}/>
                                             </div>
                                         ))}
                                     </div>

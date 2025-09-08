@@ -8,6 +8,7 @@ export interface ShirtOption {
     key: string;
     shirt: string;
     shirtArm: string;
+    type: 'long' | 'short' | 'shorter'
 }
 
 export interface ShoeOption {
@@ -36,47 +37,56 @@ export const clothingOptions: ClothingOptions = {
         {
             key: "shirt_b1",
             shirt: "/PNG/Shirts/Blue/blueShirt2.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png"
+            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
+            type: "long"
         },
         {
             key: "shirt_b2",
             shirt: "/PNG/Shirts/Blue/blueShirt3.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_short.png"
+            shirtArm: "/PNG/Shirts/Blue/blueArm_short.png",
+            type: "short"
         },
         {
             key: "shirt_b3",
             shirt: "/PNG/Shirts/Blue/blueShirt1.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_shorter.png"
+            shirtArm: "/PNG/Shirts/Blue/blueArm_shorter.png",
+            type: "shorter"
         },
         {
             key: "shirt_r1",
             shirt: "/PNG/Shirts/Red/redShirt5.png",
-            shirtArm: "/PNG/Shirts/Red/redArm_long.png"
+            shirtArm: "/PNG/Shirts/Red/redArm_long.png",
+            type: "long"
         },
         {
             key: "shirt_r2",
             shirt: "/PNG/Shirts/Red/redShirt6.png",
-            shirtArm: "/PNG/Shirts/Red/redArm_short.png"
+            shirtArm: "/PNG/Shirts/Red/redArm_short.png",
+            type: "short"
         },
         {
             key: "shirt_r3",
             shirt: "/PNG/Shirts/Red/redShirt7.png",
-            shirtArm: "/PNG/Shirts/Red/redArm_shorter.png"
+            shirtArm: "/PNG/Shirts/Red/redArm_shorter.png",
+            type: "shorter"
         },
         {
             key: "shirt_y1",
             shirt: "/PNG/Shirts/Yellow/shirtYellow8.png",
-            shirtArm: "/PNG/Shirts/Yellow/armYellow_long.png"
+            shirtArm: "/PNG/Shirts/Yellow/armYellow_long.png",
+            type: "long"
         },
         {
             key: "shirt_y2",
             shirt: "/PNG/Shirts/Yellow/shirtYellow1.png",
-            shirtArm: "/PNG/Shirts/Yellow/armYellow_short.png"
+            shirtArm: "/PNG/Shirts/Yellow/armYellow_short.png",
+            type: "short"
         },
         {
             key: "shirt_y3",
             shirt: "/PNG/Shirts/Yellow/shirtYellow2.png",
-            shirtArm: "/PNG/Shirts/Yellow/armYellow_shorter.png"
+            shirtArm: "/PNG/Shirts/Yellow/armYellow_shorter.png",
+            type: "shorter"
         }
     ],
     shoes: [

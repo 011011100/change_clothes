@@ -56,6 +56,7 @@ const Avatar: React.FC = () => {
             <Body
                 shirt={choose.shirt.shirt}
                 shirtArm={choose.shirt.shirtArm}
+                shirtType={choose.shirt.type}
                 hand={config.body.hand}
                 arm={config.body.arm}
             />

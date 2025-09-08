@@ -3,11 +3,12 @@ import React from 'react';
 interface BodyProps {
     shirt: string;
     shirtArm: string;
+    shirtType: 'long' | 'short' | 'shorter'
     hand: string;
     arm: string;
 }
 
-const AvatarBody: React.FC<BodyProps> = ({shirt, shirtArm, hand, arm}) => {
+const AvatarBody: React.FC<BodyProps> = ({shirt, shirtArm, shirtType, hand, arm}) => {
     return (
         <div className="avatar-body">
             <img src={shirt} style={{position: 'absolute', top: 179, left: 162, zIndex: 50}}/>
@@ -17,7 +18,7 @@ const AvatarBody: React.FC<BodyProps> = ({shirt, shirtArm, hand, arm}) => {
             <img src={hand} style={{position: 'absolute', top: 280, left: 416, zIndex: 4}}/>
             {/*/!* 左手 *!/*/}
             <img src={shirtArm}
-                 style={{position: 'absolute', top: 181, left: 20, zIndex: 45, transform: 'scaleX(-1)'}}/>
+                 style={{position: 'absolute', top: 181, left: shirtType === 'long' ? 20 : shirtType === 'short' ? 72 : 122, zIndex: 45, transform: 'scaleX(-1)'}}/>
             <img src={arm} style={{position: 'absolute', top: 181, left: 20, zIndex: 40, transform: 'scaleX(-1)'}}/>
             <img src={hand} style={{position: 'absolute', top: 280, left: 0, zIndex: 4, transform: 'scaleX(-1)'}}/>
         </div>

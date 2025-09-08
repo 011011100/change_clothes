@@ -4,7 +4,7 @@ import {findOptionByKey} from "./FindOptionByKey.ts";
 interface ClothingOptionsState {
     choose: {
         hair: { key: string; path: string };
-        shirt: { key: string; shirt: string; shirtArm: string };
+        shirt: { key: string; shirt: string; shirtArm: string; type: 'long' | 'short' | 'shorter' };
         shoes: { key: string; path: string };
     };
 
@@ -20,7 +20,8 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
         shirt: {
             key: "shirt_b1",
             shirt: "/PNG/Shirts/Blue/blueShirt2.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png"
+            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
+            type: "long"
         },
         shoes: {
             key: "shoes1",
