@@ -1,19 +1,19 @@
 {
   "head": {
-    "hair": "/PNG/Hair/Black/blackMan1.png",
-    "face": "/PNG/Face/Completes/face1.png",
-    "head": "/PNG/Skin/Tint 1/tint1_head.png",
-    "neck": "/PNG/Skin/Tint 1/tint1_neck.png"
+    "hair": "http://localhost:3000/assets/Hair/Black/blackMan1.png",
+    "face": "http://localhost:3000/assets/Face/Completes/face1.png",
+    "head": "http://localhost:3000/assets/Skin/Tint 1/tint1_head.png",
+    "neck": "http://localhost:3000/assets/Skin/Tint 1/tint1_neck.png"
   },
   "body": {
-    "shirt": "/PNG/Shirts/Blue/blueShirt1.png",
-    "shirtArm":"/PNG/Shirts/Blue/blueArm_long.png",
-    "hand": "/PNG/Skin/Tint 1/tint1_hand.png",
-    "arm": "/PNG/Skin/Tint 1/tint1_arm.png"
+    "shirt": "http://localhost:3000/assets/Shirts/Blue/blueShirt1.png",
+    "shirtArm":"http://localhost:3000/assets/Shirts/Blue/blueArm_long.png",
+    "hand": "http://localhost:3000/assets/Skin/Tint 1/tint1_hand.png",
+    "arm": "http://localhost:3000/assets/Skin/Tint 1/tint1_arm.png"
   },
   "lowerBody": {
-    "waist": "/PNG/Pants/Blue 1/pantsBlue11.png",
-    "pants": "/PNG/Pants/Blue 1/pantsBlue1_long.png",
-    "shoes":  "/PNG/Shoes/Black/blackShoe1.png"
+    "waist": "http://localhost:3000/assets/Pants/Blue 1/pantsBlue11.png",
+    "pants": "http://localhost:3000/assets/Pants/Blue 1/pantsBlue1_long.png",
+    "shoes":  "http://localhost:3000/assets/Shoes/Black/blackShoe1.png"
   }
 }
