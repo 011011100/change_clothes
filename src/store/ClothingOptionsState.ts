@@ -32,7 +32,7 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
         },
         background: {
             key: "room3",
-            path: apiUrl + "/api/resource/background/Wasteland.jpg"
+            path: apiUrl + "/api/resource/Background/Wasteland.jpg"
         }
     },
 
