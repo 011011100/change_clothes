@@ -28,20 +28,20 @@ export interface CharacterAssets {
 
 export const characterAssets: CharacterAssets = {
     head: {
-        hair: `${apiUrl}assets/Hair/Black/blackMan1.png`,
-        face: `${apiUrl}assets/Face/Completes/face1.png`,
-        head: `${apiUrl}assets/Skin/Tint 1/tint1_head.png`,
-        neck: `${apiUrl}assets/Skin/Tint 1/tint1_neck.png`
+        hair: `${apiUrl}/api/resource/Hair/Black/blackMan1.png`,
+        face: `${apiUrl}/api/resource/Face/Completes/face1.png`,
+        head: `${apiUrl}/api/resource/Skin/Tint 1/tint1_head.png`,
+        neck: `${apiUrl}/api/resource/Skin/Tint 1/tint1_neck.png`
     },
     body: {
-        shirt: `${apiUrl}assets/Shirts/Blue/blueShirt1.png`,
-        shirtArm: `${apiUrl}assets/Shirts/Blue/blueArm_long.png`,
-        hand: `${apiUrl}assets/Skin/Tint 1/tint1_hand.png`,
-        arm: `${apiUrl}assets/Skin/Tint 1/tint1_arm.png`
+        shirt: `${apiUrl}/api/resource/Shirts/Blue/blueShirt1.png`,
+        shirtArm: `${apiUrl}/api/resource/Shirts/Blue/blueArm_long.png`,
+        hand: `${apiUrl}/api/resource/Skin/Tint 1/tint1_hand.png`,
+        arm: `${apiUrl}/api/resource/Skin/Tint 1/tint1_arm.png`
     },
     lowerBody: {
-        waist: `${apiUrl}assets/Pants/Blue 1/pantsBlue11.png`,
-        pants: `${apiUrl}assets/Pants/Blue 1/pantsBlue1_long.png`,
-        shoes: `${apiUrl}assets/Shoes/Black/blackShoe1.png`
+        waist: `${apiUrl}/api/resource/Pants/Blue 1/pantsBlue11.png`,
+        pants: `${apiUrl}/api/resource/Pants/Blue 1/pantsBlue1_long.png`,
+        shoes: `${apiUrl}/api/resource/Shoes/Black/blackShoe1.png`
     }
 };

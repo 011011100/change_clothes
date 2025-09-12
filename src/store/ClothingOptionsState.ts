@@ -18,21 +18,21 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
     choose: {
         hair: {
             key: "hair1",
-            path: apiUrl + "/Hair/Black/blackMan1.png"
+            path: apiUrl + "/api/resource/Hair/Black/blackMan1.png"
         },
         shirt: {
             key: "shirt_b1",
-            shirt: apiUrl + "/Shirts/Blue/blueShirt2.png",
-            shirtArm: apiUrl + "/Shirts/Blue/blueArm_long.png",
+            shirt: apiUrl + "/api/resource/Shirts/Blue/blueShirt2.png",
+            shirtArm: apiUrl + "/api/resource/Shirts/Blue/blueArm_long.png",
             type: "long"
         },
         shoes: {
             key: "shoes1",
-            path: apiUrl + "/Shoes/Black/blackShoe1.png"
+            path: apiUrl + "/api/resource/Shoes/Black/blackShoe1.png"
         },
         background: {
             key: "room3",
-            path: apiUrl + "/background/Wasteland.jpg"
+            path: apiUrl + "/api/resource/background/Wasteland.jpg"
         }
     },
 
