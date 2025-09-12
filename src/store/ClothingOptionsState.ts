@@ -1,5 +1,7 @@
-import { create } from "zustand";
+import {create} from "zustand";
 import {findOptionByKey} from "./FindOptionByKey.ts";
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 interface ClothingOptionsState {
     choose: {
@@ -16,21 +18,21 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
     choose: {
         hair: {
             key: "hair1",
-            path: "/PNG/Hair/Black/blackMan1.png"
+            path: apiUrl + "/Hair/Black/blackMan1.png"
         },
         shirt: {
             key: "shirt_b1",
-            shirt: "/PNG/Shirts/Blue/blueShirt2.png",
-            shirtArm: "/PNG/Shirts/Blue/blueArm_long.png",
+            shirt: apiUrl + "/Shirts/Blue/blueShirt2.png",
+            shirtArm: apiUrl + "/Shirts/Blue/blueArm_long.png",
             type: "long"
         },
         shoes: {
             key: "shoes1",
-            path: "/PNG/Shoes/Black/blackShoe1.png"
+            path: apiUrl + "/Shoes/Black/blackShoe1.png"
         },
         background: {
             key: "room3",
-            path:"/background/Wasteland.jpg"
+            path: apiUrl + "/background/Wasteland.jpg"
         }
     },
 
@@ -39,7 +41,7 @@ export const useClothingOptionsStore = create<ClothingOptionsState>((set) => ({
             const found = findOptionByKey(part, key);
             if (found) {
                 return {
-                    choose: { ...state.choose, [part]: found }
+                    choose: {...state.choose, [part]: found}
                 };
             }
             return state;
