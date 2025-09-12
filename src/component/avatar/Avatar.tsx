@@ -3,6 +3,7 @@ import Body from './AvatarBody.tsx';
 import LowerBody from './AvatarLowerBody.tsx';
 import Head from "./AvatarHand.tsx";
 import {useClothingOptionsStore} from "../../store/ClothingOptionsState.ts";
+import { characterAssets } from '../../store/avatarConfig.ts';
 
 interface AvatarConfig {
     head: {
@@ -31,10 +32,7 @@ const Avatar: React.FC = () => {
     const [config, setConfig] = useState<AvatarConfig | null>(null);
 
     useEffect(() => {
-        fetch('/avatarConfig.json')
-            .then((res) => res.json())
-            .then((data) => setConfig(data))
-            .catch((err) => console.error(err));
+        setConfig(characterAssets);
     }, []);
 
     if (!config) return <div>Loading...</div>;
